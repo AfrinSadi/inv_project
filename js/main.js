@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var DOMAIN = "http://localhost/inv_project/public_html";
+	var DOMAIN = "http://localhost/inventory-management-system";
 	$("#register_form").on("submit",function(){
 		var status = false;
 		var name = $("#username");
@@ -7,6 +7,10 @@ $(document).ready(function(){
 		var pass1 = $("#password1");
 		var pass2 = $("#password2");
 		var type = $("#usertype");
+<<<<<<< HEAD:main.js
+=======
+		
+>>>>>>> 14665bcd671c86e9b73ebf7a5f596f721152c901:js/main.js
 		var e_patt = new RegExp(/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9_-]+(\.[a-z0-9_-]+)*(\.[a-z]{2,4})$/);
 		if(name.val() == "" || name.val().length < 6){
 			name.addClass("border-danger");
@@ -79,51 +83,55 @@ $(document).ready(function(){
 		}
 	})
 
-	//For Login Part
-	$("#form_login").on("submit",function(){
-		var email = $("#log_email");
-		var pass = $("#log_password");
-		var status = false;
-		if (email.val() == "") {
-			email.addClass("border-danger");
-			$("#e_error").html("<span class='text-danger'>Please Enter Email Address</span>");
-			status = false;
-		}else{
-			email.removeClass("border-danger");
-			$("#e_error").html("");
-			status = true;
-		}
-		if (pass.val() == "") {
-			pass.addClass("border-danger");
-			$("#p_error").html("<span class='text-danger'>Please Enter Password</span>");
-			status = false;
-		}else{
-			pass.removeClass("border-danger");
-			$("#p_error").html("");
-			status = true;
-		}
-		if (status) {
-			$(".overlay").show();
-			$.ajax({
-				url : DOMAIN+"/includes/process.php",
-				method : "POST",
-				data : $("#form_login").serialize(),
-				success : function(data){
-					if (data == "NOT_REGISTERD") {
-						$(".overlay").hide();
-						email.addClass("border-danger");
-						$("#e_error").html("<span class='text-danger'>It seems like you are not registered</span>");
-					}else if(data == "PASSWORD_NOT_MATCHED"){
-						$(".overlay").hide();
-						pass.addClass("border-danger");
-						$("#p_error").html("<span class='text-danger'>Please Enter Correct Password</span>");
-						status = false;
-					}else{
-						$(".overlay").hide();
-						console.log(data);
-						window.location.href = DOMAIN+"/dashboard.php";
-					}
+	
+})
+
+
+//For Login Part
+$("#form_login").on("submit",function(){
+	var email = $("#log_email");
+	var pass = $("#log_password");
+	var status = false;
+	if (email.val() == "") {
+		email.addClass("border-danger");
+		$("#e_error").html("<span class='text-danger'>Please Enter Email Address</span>");
+		status = false;
+	}else{
+		email.removeClass("border-danger");
+		$("#e_error").html("");
+		status = true;
+	}
+	if (pass.val() == "") {
+		pass.addClass("border-danger");
+		$("#p_error").html("<span class='text-danger'>Please Enter Password</span>");
+		status = false;
+	}else{
+		pass.removeClass("border-danger");
+		$("#p_error").html("");
+		status = true;
+	}
+	if (status) {
+		$(".overlay").show();
+		$.ajax({
+			url : DOMAIN+"/includes/process.php",
+			method : "POST",
+			data : $("#form_login").serialize(),
+			success : function(data){
+				if (data == "NOT_REGISTERD") {
+					$(".overlay").hide();
+					email.addClass("border-danger");
+					$("#e_error").html("<span class='text-danger'>It seems like you are not registered</span>");
+				}else if(data == "PASSWORD_NOT_MATCHED"){
+					$(".overlay").hide();
+					pass.addClass("border-danger");
+					$("#p_error").html("<span class='text-danger'>Please Enter Correct Password</span>");
+					status = false;
+				}else{
+					$(".overlay").hide();
+					console.log(data);
+					window.location.href = DOMAIN+"/dashboard.php";
 				}
+<<<<<<< HEAD:main.js
 			})
 		}
 	})
@@ -233,4 +241,9 @@ $("#product_form").on("submit",function(){
 
 
 
+=======
+			}
+		})
+	}
+>>>>>>> 14665bcd671c86e9b73ebf7a5f596f721152c901:js/main.js
 })
