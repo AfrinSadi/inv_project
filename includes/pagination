@@ -61,6 +61,7 @@ if (isset($_GET["pageno"])) {
 	}
 	echo "<div style='font-size:22px;'>".$array["pagination"]."</div>";
 
+	
 }
 
 
