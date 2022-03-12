@@ -38,7 +38,7 @@ if (isset($_SESSION["userid"])) {
 		?>
 		<div class="card mx-auto" style="width: 23rem; -webkit-box-shadow: 0px 0px 18px -4px #000000; 
 box-shadow: 0px 0px 18px -4px #000000;">
-		  <img class="card-img-top mx-auto" style="width:45%;" src="./images/pro2.png" alt="Login Icon">
+		  <img class="card-img-top mx-auto" style="width:60%;" src="./images/pro2.jpg" alt="Login Icon">
 		  <div class="card-body">
 		    <form id="form_login" onsubmit="return false">
 			  <div class="form-group">
