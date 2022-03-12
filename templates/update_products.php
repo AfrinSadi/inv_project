@@ -37,10 +37,10 @@
 
                         </select>
                     </div>
-                    <!--<div class="form-group">
-            <label>Product Price</label>
-            <input type="text" class="form-control" id="product_price" name="product_price" placeholder="Enter Price of Product" required/>
-          </div>-->
+                    <div class="form-group">
+                        <label>Product Price</label>
+                        <input type="text" class="form-control" id="product_price" name="product_price" placeholder="Enter Price of Product" required />
+                    </div>
                     <div class="form-group">
                         <label>Quantity</label>
                         <input type="text" class="form-control" id="product_qty" name="product_qty" placeholder="Enter Quantity" required />
