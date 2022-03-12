@@ -24,7 +24,16 @@ if (!isset($_SESSION["userid"])) {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				
+				<div class="card mx-auto">
+				  <img class="card-img-top mx-auto" style="width:60%;" src="./images/pro3.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h4 class="card-title text-center">Profile Info</h4>
+				    <p class="card-text"><i class="fa fa-user">&nbsp;</i>Tamanna</p>
+				    <p class="card-text"><i class="fa fa-user">&nbsp;</i>Admin</p>
+				    <!-- <p class="card-text">Last Login : <?php $_SESSION["last_login"]?>07.10.2021</p> -->
+				    <a href="#" class="btn text-center" style="background:#292952; color:white"><i class="fa fa-edit">&nbsp;</i>Edit Profile</a>
+				  </div>
+				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="jumbotron" style="width:100%;height:100%;">
