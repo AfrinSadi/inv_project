@@ -309,8 +309,6 @@ if (isset($_POST["order_date"]) AND isset($_POST["cust_name"])) {
 	echo $result = $m->storeCustomerOrderInvoice($orderdate,$cust_name,$ar_tqty,$ar_qty,$ar_price,$ar_pro_name,$sub_total,$gst,$discount,$net_total,$paid,$due,$payment_type);
 
 
-
-
 }
 
 ?>

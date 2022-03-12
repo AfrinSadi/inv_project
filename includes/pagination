@@ -38,8 +38,7 @@ function pagination($con,$table,$pno,$n){
 			$pagination .= "<li class='page-item'><a class='page-link' href='".$next."' style='color:#333;'> Next </a></li></ul>";
 		}
 	}
-//LIMIT 0,10
-	//LIMIT 20,10
+
 	$limit = "LIMIT ".($pageno - 1) * $numberOfRecordsPerPage.",".$numberOfRecordsPerPage;
 
 	return ["pagination"=>$pagination,"limit"=>$limit];
@@ -62,6 +61,5 @@ if (isset($_GET["pageno"])) {
 	echo "<div style='font-size:22px;'>".$array["pagination"]."</div>";
 
 }
-
 
 ?>
