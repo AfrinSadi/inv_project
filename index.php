@@ -55,9 +55,7 @@ box-shadow: 0px 0px 18px -4px #000000;">
 			  <span><a href="register.php">Register</a></span>
 			</form>
 		    
-		  </div>
-		  <div class="card-footer"><a href="#">Forget Password ?</a></div>
-		</div>
+		  
 	</div>
 
 </body>
