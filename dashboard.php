@@ -25,7 +25,7 @@ if (!isset($_SESSION["userid"])) {
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card mx-auto">
-				  <img class="card-img-top mx-auto" style="width:60%;" src="./images/pro3.png" alt="Card image cap">
+				  <img class="card-img-top mx-auto" style="width:60%;" src="./images/pro3.jpg" alt="Card image cap">
 				  <div class="card-body">
 				    <h4 class="card-title text-center">Profile Info</h4>
 				    <p class="card-text"><i class="fa fa-user">&nbsp;</i>Tamanna</p>
