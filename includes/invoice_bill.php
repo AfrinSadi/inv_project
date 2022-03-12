@@ -55,7 +55,6 @@ if ($_GET["order_date"] && $_GET["invoice_no"]) {
 	$pdf->Output("../PDF_INVOICE/PDF_INVOICE_".$_GET["invoice_no"].".pdf","F");
 
 	$pdf->Output();	
-    
 
 }
 

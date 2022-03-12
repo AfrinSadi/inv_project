@@ -1,7 +1,7 @@
 <?php
 
 /**
-* User Class for account creation and login purpose
+* User Class for account creation and login pupose
 */
 class User
 {
@@ -84,4 +84,10 @@ class User
 
 }
 
+//$user = new User();
+//echo $user->createUserAccount("Test","rizwan1@gmail.com","1234567890","Admin");
+
+//echo $user->userLogin("rizwan1@gmail.com","1234567890");
+
+//echo $_SESSION["username"];
 ?>

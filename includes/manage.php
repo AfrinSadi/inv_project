@@ -35,11 +35,36 @@ class Manage
 
 	}
 
+   /* // previous code
 
+	// private function pagination($con,$table,$pno,$n){
+	// 	$query = $con->query("SELECT COUNT(*) as rows FROM ".$table);
+	// 	$row = mysqli_fetch_assoc($query);
+	// 	//$totalRecords = 100000;
+	// 	$pageno = $pno;
+	// 	$numberOfRecordsPerPage = $n;
+
+	// 	$last = ceil($row["rows"]/$numberOfRecordsPerPage);
+
+	// 	$pagination = "<ul class='pagination'>";
+
+	*/
 
    	// modified code start - error 40 line
    	private function pagination($con,$table,$pno,$n){
-		
+		/*$query = $con->query("SELECT COUNT(*) as rows FROM ".$table);
+
+		$row = mysqli_fetch_assoc($query);
+
+             //$query = "SELECT COUNT(*)  FROM ".$table;
+            //// $result = mysqli_query($con, $query);
+             //$row = mysqli_fetch_assoc($result);
+
+		//$totalRecords = 100000;
+		$pageno = $pno;
+		$numberOfRecordsPerPage = $n;
+
+		$last = ceil($row["rows"]/$numberOfRecordsPerPage);*/
 		echo "1";
 		$query = $con->query("SELECT COUNT(*) as `rows` FROM ".$table);
 		echo mysqli_error($con);
@@ -51,7 +76,8 @@ class Manage
 
 
 		$last = ceil($row["rows"]/$numberOfRecordsPerPage);
-	
+		//echo "Total Page".$last."<br/>";
+		//$pagination="";
 
 		$pagination = "<ul class='pagination'>"; 
 
@@ -183,3 +209,11 @@ class Manage
 
 	
 }
+
+//$obj = new Manage();
+//echo "<pre>";
+//print_r($obj->manageRecordWithPagination("categories",1));
+//echo $obj->deleteRecord("categories","cid",14);
+//print_r($obj->getSingleRecord("categories","cid",1));
+//echo $obj->update_record("categories",["cid"=>1],["parent_cat"=>0,"category_name"=>"Electro","status"=>1]);
+?>

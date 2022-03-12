@@ -6,7 +6,7 @@ $con = mysqli_connect("localhost","root","","test");
 function pagination($con,$table,$pno,$n){
 	$query = $con->query("SELECT COUNT(*) as rows FROM ".$table);
 	$row = mysqli_fetch_assoc($query);
-
+	//$totalRecords = 100000;
 	$pageno = $pno;
 	$numberOfRecordsPerPage = $n;
 

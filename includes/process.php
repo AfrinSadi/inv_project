@@ -68,6 +68,7 @@ if (isset($_POST["added_date"]) AND isset($_POST["product_name"])) {
 	echo $result;
 	exit();
 }
+
 //Manage Category
 if (isset($_POST["manageCategory"])) {
 	$m = new Manage();
